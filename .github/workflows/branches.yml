@@ -3,8 +3,7 @@ on:
   push:
     branches-ignore:
         - master
-
-jobs:
+  jobs:
   coding-standard:
     name: Coding Standard
     runs-on: ubuntu-latest

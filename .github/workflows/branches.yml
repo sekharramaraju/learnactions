@@ -1,6 +1,8 @@
 name: shell Commands
 on:
-  branches:
+  push:
+    branches:
+      - master
 
 jobs:
   coding-standard:

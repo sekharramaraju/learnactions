@@ -1,5 +1,7 @@
 name: shell Commands
-on: [push]
+on:
+  branches:
+
 jobs:
   coding-standard:
     name: Coding Standard
@@ -54,4 +56,4 @@ jobs:
       - name: Install dependencies
         run: composer install --no-progress --prefer-dist --optimize-autoloader
       - name: Static Analysis using PHPStan
-        run: phpstan analyse --no-progress src/
+        run: phpstan analyse --no-progress --level max src/

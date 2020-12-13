@@ -1,4 +1,4 @@
-vesion: 0.0
+version: 0.0
 files:
   - source: /
     destination: /var/www/html/public

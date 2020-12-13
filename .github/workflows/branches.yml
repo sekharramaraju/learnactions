@@ -18,8 +18,8 @@ jobs:
     steps:
       - name: install php
         run: |
+          sudo update-alternatives --set php /usr/bin/php7.2
           php -v
-          sudo update-alternatives --config php
 
       - name: Install AWS Client
         run: |

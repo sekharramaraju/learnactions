@@ -11,8 +11,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-	  - name: Install PHP
-	    run: |
-				sudo apt-get install curl apache2 \
-					libapache2-mod-php php php-mysql php-mbstring php-intl php-xml
-      
+	 - name: Checkout
+        run: |
+		sudo apt-get install curl apache2 libapache2-mod-php php php-mysql php-mbstring php-intl php-xml
+	  

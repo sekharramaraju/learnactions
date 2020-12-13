@@ -36,7 +36,7 @@ jobs:
 
       - name: download dependencies
         run: |
-          composer install
+          php composer.phar install
           ls
           
       # - name: Configure AWS credentials

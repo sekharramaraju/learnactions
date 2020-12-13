@@ -31,7 +31,10 @@ jobs:
           curl -sS https://getcomposer.org/installer | php
           sudo mv composer.phar /usr/local/bin/composer
           sudo chmod +x /usr/local/bin/composer
-
+      - name: download dependencies
+        run: |
+          php composer.phar install
+          
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:

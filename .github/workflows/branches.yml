@@ -16,11 +16,12 @@ jobs:
         deploy-group: ['staging']
         s3-filename: ['staging-cakephpapp-${{ github.sha }}']
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
       - name: install php
         run: |
+          sudo apt-get install -y php7.2
           php -v
+          sudo update-alternatives --config php
+
       - name: Install AWS Client
         run: |
           curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
@@ -31,6 +32,9 @@ jobs:
           curl -sS https://getcomposer.org/installer | php
           sudo mv composer.phar /usr/local/bin/composer
           sudo chmod +x /usr/local/bin/composer
+      - name: Checkout
+        uses: actions/checkout@v2
+
       - name: download dependencies
         run: |
           composer install

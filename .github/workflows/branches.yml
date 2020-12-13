@@ -15,3 +15,5 @@ jobs:
         run: |
           sudo apt-get install curl apache2 libapache2-mod-php \
           php php-mysql php-mbstring php-intl php-xml
+
+          php -v

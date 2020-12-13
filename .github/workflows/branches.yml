@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v2
       - name: install php
         run: |
-          sudo apt-get install curl apache2 libapache2-mod-php \
-          php php-mysql php-mbstring php-intl php-xml
+          sudo apt-get install curl
+          sudo apt-get install -y php7.2
 
           php -v

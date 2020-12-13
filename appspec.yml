@@ -1,0 +1,11 @@
+vesion: 0.0
+files:
+  - source: /
+    destination: /var/www/html/public
+permissions:
+  - object: /var/www/html/
+    owner: ubuntu
+    group: ubuntu
+    type:
+      - directory
+      - file

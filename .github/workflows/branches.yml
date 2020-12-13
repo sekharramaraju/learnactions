@@ -21,11 +21,11 @@ jobs:
           sudo update-alternatives --set php /usr/bin/php7.2
           php -v
 
-      - name: Install AWS Client
-        run: |
-          curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-          unzip awscliv2.zip
-          sudo ./aws/install
+      # - name: Install AWS Client
+      #   run: |
+      #     curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+      #     unzip awscliv2.zip
+      #     sudo ./aws/install
       - name: install composer
         run: |
           curl -sS https://getcomposer.org/installer | php
